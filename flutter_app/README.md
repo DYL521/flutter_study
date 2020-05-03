@@ -1,6 +1,6 @@
 # flutterapp
 
-A new Flutter application.
+基础语法知识.
 
 ## Getting Started
 
