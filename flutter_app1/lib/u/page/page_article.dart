@@ -32,6 +32,8 @@ class _ArticlePageState extends State<ArticlePage> {
   @override
   void initState() {
     super.initState();
+
+
     _controller.addListener(() {
       ///获得 SrollController 监听控件可以滚动的最大范围
       var maxScroll = _controller.position.maxScrollExtent;
@@ -93,7 +95,7 @@ class _ArticlePageState extends State<ArticlePage> {
   }
 
   ///下拉刷新
-  Future<void> _pullToRefresh() async {
+  Future<void>  _pullToRefresh() async {
     curPage = 0;
     ///组合两个异步任务，创建一个都完成后的新的Future ，文章列表， banner
     Iterable<Future> futures = [_getArticlelist(), _getBanner()];
@@ -135,9 +137,10 @@ class _ArticlePageState extends State<ArticlePage> {
     );
   }
 
-  Widget _buildItem(int i) {
 
-    if (i == 0) {
+
+  Widget _buildItem(int i) {
+    if (i == 0) { //现实banner图
       //Container ：容器
       // 这里现实的banner图
       return new Container(
