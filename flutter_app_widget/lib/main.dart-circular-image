@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("xxxxx")),
+        body: HomeContent(),
+      ),
+    );
+  }
+}
+
+// borderRadius 实现圆角图片 : 方法1
+class HomeContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Center(
+      child: Container(
+        width: 300.0,
+        height: 300.0,
+        decoration: BoxDecoration(
+            // 背景
+            color: Colors.blueGrey,
+//            borderRadius: BorderRadius.all(Radius.circular(25.0)) // 写法1
+            borderRadius: BorderRadius.circular(150), // 写法2
+            image: DecorationImage(
+                image: NetworkImage(
+                    "https://dss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/358368957a427a284af64347cfd0feaa_259_194.jpg"),
+                fit: BoxFit.cover)),
+      ),
+    );
+  }
+}

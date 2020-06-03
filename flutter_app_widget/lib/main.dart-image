@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("xxxxx")),
+        body: HomeContent(),
+      ),
+    );
+  }
+}
+
+class HomeContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Center(
+      child: Container(
+        child: Image.network(
+          "https://dss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/358368957a427a284af64347cfd0feaa_259_194.jpg",
+          alignment: Alignment.center, //显示位置
+          color: Colors.blue,
+          colorBlendMode: BlendMode.luminosity, // 混合颜色模式
+//          fit: BoxFit.cover, //显示效果 cover 图片拉伸不变形，但是坑会白裁剪
+
+          repeat: ImageRepeat.repeat,
+        ),
+        width: 300.0,
+        height: 300.0,
+        decoration: BoxDecoration(
+            // 背景
+            color: Colors.blueGrey),
+      ),
+    );
+  }
+}
