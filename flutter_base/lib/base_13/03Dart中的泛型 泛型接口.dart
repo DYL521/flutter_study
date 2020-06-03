@@ -28,6 +28,8 @@ Dart中的泛型接口:
   // }
 
 
+
+// 范型类
 abstract class Cache<T>{
   getByKey(String key);
   void setByKey(String key, T value);

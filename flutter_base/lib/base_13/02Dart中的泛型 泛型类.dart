@@ -25,7 +25,7 @@
 
 
 
-
+// 范型类
  class PrintClass<T>{
       List list=new List<T>();
       void add(T value){
