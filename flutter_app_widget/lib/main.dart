@@ -21,27 +21,40 @@ class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return ListView(
-      padding: EdgeInsets.all(10),
-      children: <Widget>[
-        // 任何Widget 都可以放
-        Image.network("https://www.itying.com/images/flutter/1.png"),
-        Container(
-          child: Text(
-            "我是一个标题",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 28
-            ),
+    return Container(
+      height: 180, //高度，父Container
+      child: ListView(
+        scrollDirection: Axis.horizontal, // 方向 ，水平
+        children: <Widget>[
+          Container(
+            width: 180,
+            color: Colors.red,
           ),
-          height: 60,
-          padding: EdgeInsets.fromLTRB(0, 10, 0, 10),//间距
-        ),
+          Container(
+            child: ListView(
+              children: <Widget>[
+                Image.network("https://www.itying.com/images/flutter/2.png"),
+                Text("我是一个文本"),
 
-        Image.network("https://www.itying.com/images/flutter/2.png"),
-        Image.network("https://www.itying.com/images/flutter/3.png"),
-        Image.network("https://www.itying.com/images/flutter/4.png"),
-      ],
+              ],
+            ),
+            width: 180,
+            color: Colors.deepOrangeAccent,
+          ),
+          Container(
+            width: 180,
+            color: Colors.orange,
+          ),
+          Container(
+            width: 180,
+            color: Colors.red,
+          ),
+          Container(
+            width: 180,
+            color: Colors.blueGrey,
+          ),
+        ],
+      ),
     );
   }
 }
