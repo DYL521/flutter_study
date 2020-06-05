@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+import 'listData.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("动态列表list")),
+        body: HomeContent(),
+      ),
+    );
+  }
+}
+
+//  动态列表 - 动态的数据
+class HomeContent extends StatelessWidget {
+  //自定义方法 -返回Widget
+  List<Widget> _getData() {
+    var tempList = listData.map((value) {
+      return ListTile(
+        title: Text(value["title"]),
+        subtitle: Text(value["author"]),
+        leading: Image.network(value["imageUrl"]),
+      );
+    }); // map 返回的是（11，22）
+
+    return tempList.toList(); // 转成list
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+
+    return ListView(
+      children: this._getData(),
+    );
+  }
+}

@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+import 'listData.dart';
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("xxxxx")),
+        body: HomeContent(),
+      ),
+    );
+  }
+}
+
+//  动态列表 - 动态的数据
+class HomeContent extends StatelessWidget {
+
+
+  //自定义方法 -返回Widget
+  List<Widget> _getData(){
+
+    List<Widget> list = new List();
+    for(var i =0 ;i<20;i++){
+      list.add(ListTile(
+        title: Text("握手 i一个标题： "+ i.toString()),
+      ));
+    }
+    return list;
+
+//    return [
+//      ListTile(
+//        title: Text("我是一个列表"),
+//      ),
+//      ListTile(
+//        title: Text("我是一个列表"),
+//      ),
+//      ListTile(
+//        title: Text("我是一个列表"),
+//      ),
+//    ];
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+
+    return ListView(
+     children: this._getData(),
+    );
+  }
+}

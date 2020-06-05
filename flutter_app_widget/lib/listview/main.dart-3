@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+import 'listData.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("动态列表list")),
+        body: HomeContent(),
+      ),
+    );
+  }
+}
+
+//  动态列表 - 动态的数据 listView.builder
+class HomeContent extends StatelessWidget {
+  List list = new List();
+
+  HomeContent() {
+    for (var i = 0; i < 20; i++) {
+      this.list.add(ListTile(
+            title: Text("我是列表$i"),
+          ));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return this.list[index];
+      },
+      itemCount: this.list.length,
+    );
+  }
+}
