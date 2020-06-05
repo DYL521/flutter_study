@@ -17,18 +17,31 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// asset 加载本第图片
 class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Center(
-      child: Container(
-        child: Image.asset("images/a.jpeg"), //
-        width: 200.0,
-        height: 200.0,
+    return ListView(
+      padding: EdgeInsets.all(10),
+      children: <Widget>[
+        // 任何Widget 都可以放
+        Image.network("https://www.itying.com/images/flutter/1.png"),
+        Container(
+          child: Text(
+            "我是一个标题",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 28
+            ),
+          ),
+          height: 60,
+          padding: EdgeInsets.fromLTRB(0, 10, 0, 10),//间距
+        ),
 
-      ),
+        Image.network("https://www.itying.com/images/flutter/2.png"),
+        Image.network("https://www.itying.com/images/flutter/3.png"),
+        Image.network("https://www.itying.com/images/flutter/4.png"),
+      ],
     );
   }
 }

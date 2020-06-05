@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("xxxxx")),
+        body: HomeContent(),
+      ),
+    );
+  }
+}
+
+class HomeContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return ListView(
+      padding: EdgeInsets.all(20),
+      children: <Widget>[
+        ListTile(
+          ////ListTile 最简单的列表
+          leading: Icon(
+            Icons.repeat,
+            color: Colors.blue, // 颜 色
+            size: 40, // 大小
+          ), //leading 图标
+          title: Text(
+            "温度持续上身～～～",
+            style: TextStyle(fontSize: 18),
+          ),
+          trailing: Icon( // 后边的图标
+            Icons.repeat,
+            color: Colors.blue, // 颜 色
+            size: 40, // 大小
+          ), //lead// 标题
+          subtitle: Text(
+              "   视频中涉及的源码及课件下载地址请访问: https://www.itying.com/goods-1101.html～"), // 二级标题
+        ),
+        ListTile(
+          leading: Icon(Icons.message),
+          title: Text(
+            "温度持续上身～～～",
+            style: TextStyle(fontSize: 18),
+          ), // 标题
+          subtitle: Text(
+              "   视频中涉及的源码及课件下载地址请访问: https://www.itying.com/goods-1101.html～"), // 二级标题
+        ),
+        ListTile(
+          leading: Icon(
+            Icons.access_time,
+            color: Colors.yellow,
+          ),
+
+          title: Text(
+            "温度持续上身～～～",
+            style: TextStyle(fontSize: 18),
+          ), // 标题
+          subtitle: Text(
+              "   视频中涉及的源码及课件下载地址请访问: https://www.itying.com/goods-1101.html～"), // 二级标题
+        ),
+      ],
+    );
+  }
+}
