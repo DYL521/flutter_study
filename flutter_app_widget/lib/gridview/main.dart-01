@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'listData.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,21 +17,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//  动态列表 - 动态的数据 listView.builder
 class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return ListView.builder(
-      itemBuilder: (context, index) {
-        return ListTile(
-
-          title: Text(listData[index]['title']),
-          leading: Image.network(listData[index]['imageUrl']),
-          subtitle: Text(listData[index]['author']),
-        );
-      },
-      itemCount: listData.length,
-    );
+    return GridView.count(crossAxisCount: 5, //每行的数据
+    children: <Widget>[
+      Text("文本"),
+      Text("文本"),
+      Text("文本"),
+      Text("文本"),
+      Text("文本"),
+      Text("文本"),
+      Text("文本"),
+    ],);
   }
 }
