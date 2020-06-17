@@ -14,7 +14,8 @@
           "author": 'Alibaba',
           "imageUrl": 'https://www.itying.com/images/flutter/3.png',
       },
-      {
+      {///Users/dyldengyurin/Library/Android/sdk Users/dyldengyurin/Library/Android/sdk
+
           "title": 'Candy Shop',
           "author": 'Mohamed Chahin',
           "imageUrl": 'https://www.itying.com/images/flutter/4.png',
