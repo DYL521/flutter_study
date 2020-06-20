@@ -42,7 +42,11 @@ class HomeContent extends StatelessWidget {
                   backgroundImage: NetworkImage(value["imageUrl"]),
                 ), //BoxFit.cover 图片充满容器,
                 title: Text(value["title"]),
-                subtitle: Text(value["title"]),
+                subtitle: Text(
+                  value["title"],
+                  maxLines: 2, //文字最大行数
+                  overflow: TextOverflow.ellipsis, //文字长度缩略
+                ),
               )
             ],
           ), //列 list view不能再嵌套listview
