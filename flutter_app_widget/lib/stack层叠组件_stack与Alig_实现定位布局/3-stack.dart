@@ -28,6 +28,7 @@ class HomeContent extends StatelessWidget {
         height: 400,
         width: 300,
         color: Colors.red,
+        padding: EdgeInsets.all(10),
         child: Stack(
 //          alignment: Alignment.center, //alignment 同时都剧中了，不能精确控制
           children: <Widget>[
@@ -35,7 +36,7 @@ class HomeContent extends StatelessWidget {
               left: 10,
               child: Icon(
                 Icons.home,
-                size: 40,
+                size: 10,
                 color: Colors.white,
               ),
             ),
