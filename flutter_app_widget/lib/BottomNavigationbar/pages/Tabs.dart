@@ -36,6 +36,9 @@ class _TabsState extends State<Tabs> {
             });
             print(this._currentIndex);
           }, // 底部点中执行的方法
+          iconSize: 38.0,
+          fixedColor: Colors.red, //选中的颜色
+          type: BottomNavigationBarType.fixed, // 配置底部tabs可以有多个按钮
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
